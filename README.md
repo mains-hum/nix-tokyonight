@@ -16,11 +16,11 @@
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="screenshot/4.png" width="48%" />
-  <img src="screenshot/3.png" width="48%" />
-  <br />
   <img src="screenshot/1.png" width="48%" />
   <img src="screenshot/2.png" width="48%" />
+  <br />
+  <img src="screenshot/3.png" width="48%" />
+  <img src="screenshot/4.png" width="48%" />
 </p>
 
 ---
