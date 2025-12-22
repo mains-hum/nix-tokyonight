@@ -1,0 +1,137 @@
+:root {
+    --window-colour:               #1a1b26; 
+    --secondary-colour:            #24283b; 
+    --inverted-colour:             #a9b1d6; 
+
+    --uc-identity-color-blue:      #7aa2f7;
+    --uc-identity-color-turquoise: #7dcfff;
+    --uc-identity-color-green:      #9ece6a;
+    --uc-identity-color-yellow:    #e0af68;
+    --uc-identity-color-orange:    #ff9e64;
+    --uc-identity-color-red:       #f7768e;
+    --uc-identity-color-pink:      #bb9af7;
+    --uc-identity-color-purple:    #9d7cd8;
+     
+    --urlbar-popup-url-color: var(--uc-identity-color-blue) !important;
+    --uc-border-radius: 4px; 
+    --uc-urlbar-width: clamp(250px, 50vw, 600px);
+    --uc-active-tab-width:   clamp( 50px, 18vw, 220px);
+    --uc-inactive-tab-width: clamp( 50px, 15vw, 200px);
+    --show-tab-close-button: none;  
+    --show-tab-close-button-hover: -moz-inline-box; 
+    --container-tabs-indicator-margin: 0px;
+}
+
+#back-button{ display: -moz-inline-box !important; }
+#forward-button{ display: none !important; }
+#stop-button{ display: none !important; }
+#reload-button{ display: none !important; }
+#star-button{ display: none !important; }
+#urlbar-zoom-button { display: none !important; }
+#PanelUI-button { display: -moz-inline-box !important;}
+#reader-mode-button{ display: none !important; }
+#tracking-protection-icon-container { display: none !important; }
+#identity-permission-box { display: none !important; } 
+.tab-secondary-label { display: none !important; }
+#pageActionButton { display: none !important; }
+#page-action-buttons { display: none !important; }
+
+:root {
+    --uc-theme-colour:                          var(--window-colour);
+    --uc-hover-colour:                          var(--secondary-colour);
+    --uc-inverted-colour:                       var(--inverted-colour);
+    
+    --button-bgcolor:                           var(--uc-theme-colour)    !important;
+    --button-hover-bgcolor:                     var(--uc-hover-colour)    !important;
+    --button-active-bgcolor:                    var(--uc-hover-colour)    !important;
+    
+    --toolbar-bgcolor:                          var(--uc-theme-colour)    !important;
+    --toolbarbutton-hover-background:           var(--uc-hover-colour)    !important;
+    --toolbarbutton-active-background:          var(--uc-hover-colour)    !important;
+    --toolbarbutton-border-radius:              var(--uc-border-radius)   !important;
+    --lwt-toolbar-field-focus:                  var(--uc-theme-colour)    !important;
+    --toolbarbutton-icon-fill:                  var(--uc-inverted-colour) !important;
+    --toolbar-field-focus-background-color:     var(--secondary-colour)   !important;
+    --toolbar-field-color:                      var(--uc-inverted-colour) !important;
+    --toolbar-field-focus-color:                var(--uc-inverted-colour) !important;
+    
+    --tabs-border-color:                        var(--uc-theme-colour)    !important;
+    --tab-border-radius:                        var(--uc-border-radius)   !important;
+    --lwt-text-color:                           var(--uc-inverted-colour) !important;
+    --lwt-tab-text:                             var(--uc-inverted-colour) !important;
+
+    --lwt-sidebar-background-color:             var(--uc-hover-colour)    !important;
+    --lwt-sidebar-text-color:                   var(--uc-inverted-colour) !important;
+  
+    --arrowpanel-border-color:                  var(--uc-theme-colour)    !important;
+    --arrowpanel-border-radius:                 var(--uc-border-radius)   !important;
+    --arrowpanel-background:                    var(--uc-theme-colour)    !important;
+    --arrowpanel-color:                         var(--inverted-colour)    !important;
+
+    --autocomplete-popup-highlight-background:  var(--uc-inverted-colour) !important;
+    --autocomplete-popup-highlight-color:       var(--uc-theme-colour)    !important;
+    --autocomplete-popup-hover-background:      var(--uc-hover-colour)    !important;
+
+    --tab-block-margin: 2px !important;
+}
+
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+#nav-bar {
+    -moz-appearance: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: var(--uc-theme-colour) !important;
+}
+
+#PersonalToolbar toolbarbutton:not(:hover),
+#bookmarks-toolbar-button:not(:hover) { filter: grayscale(1) !important; }
+.titlebar-buttonbox-container { display: -moz-inline-box !important; }
+.titlebar-spacer { display: none !important; }
+
+.tabbrowser-tab > .tab-stack > .tab-background { 
+    box-shadow: none !important;
+    background: var(--uc-theme-colour) !important; 
+}
+
+.tabbrowser-tab[selected] > .tab-stack > .tab-background { 
+    background: var(--uc-hover-colour) !important; 
+}
+
+.tabbrowser-tab[selected] .tab-context-line {
+    background-color: var(--uc-identity-color-pink) !important;
+    height: 2px !important;
+}
+
+#nav-bar {
+    border:     none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+#urlbar-background { 
+    border: 1px solid var(--secondary-colour) !important; 
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+    border: 1px solid var(--uc-identity-color-blue) !important;
+}
+
+@media (min-width: 1000px) { 
+    #TabsToolbar { margin-left: var(--uc-urlbar-width) !important; }
+    #nav-bar { margin: calc((var(--urlbar-min-height) * -1) - 8px) calc(100vw - var(--uc-urlbar-width)) 0 0 !important; }
+}
+
+.identity-color-blue      { --identity-tab-color: var(--uc-identity-color-blue)      !important; --identity-icon-color: var(--uc-identity-color-blue)      !important; }
+.identity-color-turquoise { --identity-tab-color: var(--uc-identity-color-turquoise) !important; --identity-icon-color: var(--uc-identity-color-turquoise) !important; }
+.identity-color-green     { --identity-tab-color: var(--uc-identity-color-green)      !important; --identity-icon-color: var(--uc-identity-color-green)      !important; }
+.identity-color-yellow    { --identity-tab-color: var(--uc-identity-color-yellow)     !important; --identity-icon-color: var(--uc-identity-color-yellow)     !important; }
+.identity-color-orange    { --identity-tab-color: var(--uc-identity-color-orange)     !important; --identity-icon-color: var(--uc-identity-color-orange)     !important; }
+.identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)        !important; --identity-icon-color: var(--uc-identity-color-red)        !important; }
+.identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)       !important; --identity-icon-color: var(--uc-identity-color-pink)       !important; }
+.identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)     !important; --identity-icon-color: var(--uc-identity-color-purple)     !important; }
