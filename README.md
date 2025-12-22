@@ -1,7 +1,7 @@
 <div align="center">
 
 # ❄️ [mains-hum] / nix-tokyonight
-`Hello, I am mains-hum. This is a simple dotfiles for NixOS.`
+`Hello, I am mains-hum. Beautiful dotfile with gtk theme - tokyonight, NixOS Hyprland.`
 
 <p align="center">
   <img src="https://img.shields.io/github/repo-size/mains-hum/nix-dotf?style=for-the-badge&logo=github&color=81a1c1&logoColor=white" alt="Repo Size" />
@@ -59,25 +59,25 @@
 - Basic understanding of Nix flakes
 
 ```bash
-# 1️⃣ Install git
-sudo nano /etc/nixos/configuration.nix
+# Install git
+> sudo nano /etc/nixos/configuration.nix
 # Add to systemPackages: git
-sudo nixos-rebuild switch
+> sudo nixos-rebuild switch
 
-# 2️⃣ Clone this repository
-mkdir Pictures
-git clone https://github.com/ass-sudo/nix-dotfiles.git
-cd nix-dotfiles/nixos
+# Clone this repository
+> mkdir Pictures
+> git clone https://github.com/ass-sudo/nix-dotfiles.git
+> cd nix-dotfiles/nixos
 
-# 3️⃣ Copy configuration files
-sudo rm -rf /etc/nixos/configuration.nix
-sudo cp -a configuration.nix dotfiles/ flake.lock flake.nix home/ modules/ /etc/nixos/
+# Copy configuration files
+> sudo rm -rf /etc/nixos/configuration.nix
+> sudo cp -a configuration.nix dotfiles/ flake.lock flake.nix home/ modules/ /etc/nixos/
 
-# 4️⃣ Rebuild
-sudo nixos-rebuild switch --flake /etc/nixos#nixos
+# Rebuild
+> sudo nixos-rebuild switch --flake /etc/nixos#nixos
 
-# 5️⃣ Reboot your system
-reboot
+# Reboot your system
+> reboot
 ```
 
 ---
@@ -87,7 +87,7 @@ reboot
 - Configure your monitor in Hyprland:
 
 ```bash
-snvf /etc/nixos/dotfiles/hypr/hyprland.conf
+> snvf /etc/nixos/dotfiles/hypr/hyprland.conf
 ```
 
 ```conf
@@ -99,6 +99,10 @@ monitor = DP-1, 1920x1080@165, 0x0, 1
 -  Use username **`nixos`** for best compatibility
 -  **Do not change** the layout switch from `ALT + SHIFT` (breaks keybindings)
 -  For multiple monitors, add additional `monitor` lines
+-  Convert wallpaper to gtk gtk theme
+```bash
+> gowall convert ~/path-to-wallpaper -t tokyo-storm
+```
 
 ---
 
