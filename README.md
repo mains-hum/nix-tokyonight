@@ -61,6 +61,7 @@
 ```bash
 # Install git
 > sudo nano /etc/nixos/configuration.nix
+
 # Add to systemPackages: git
 > sudo nixos-rebuild switch
 
