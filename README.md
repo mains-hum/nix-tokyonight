@@ -66,12 +66,12 @@
 
 # Clone this repository
 > mkdir Pictures
-> git clone https://github.com/ass-sudo/nix-dotfiles.git
-> cd nix-dotfiles/nixos
+> git clone https://github.com/mains-hum/nix-tokyonight.git
+> cd nix-tokyonight/nixos
 
 # Copy configuration files
 > sudo rm -rf /etc/nixos/configuration.nix
-> sudo cp -a configuration.nix dotfiles/ flake.lock flake.nix home/ modules/ /etc/nixos/
+> sudo cp -a home/ img/ modules/ configuration.nix flake.lock flake.nix /etc/nixos
 
 # Rebuild
 > sudo nixos-rebuild switch --flake /etc/nixos#nixos
