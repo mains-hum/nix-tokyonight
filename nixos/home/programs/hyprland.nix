@@ -19,7 +19,7 @@ in
       "$mute" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
       monitor = [
-        "HDMI-A-1, 1920x1080@60, 0x0, 1"
+        "HDMI-A-1, 1920x1080@99, 0x0, 1"
         "DP-1, 1920x1080@165, 1920x0, 1"
       ];
 
