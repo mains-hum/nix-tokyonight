@@ -122,3 +122,5 @@ nix-dotf  Copyright (C) 2025-2040  mains-hum
 See the [LICENSE](LICENSE) file for details.
 
 </div>
+
+
