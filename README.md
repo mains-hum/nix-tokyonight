@@ -68,6 +68,7 @@
 # Clone this repository
 > mkdir Pictures
 > git clone https://github.com/mains-hum/nix-tokyonight.git
+> cp -r nix-tokyonight/nixos/zapret-discord-youtube-linux/ .
 > cd nix-tokyonight/nixos
 
 # Copy configuration files

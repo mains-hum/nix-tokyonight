@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-
     ./modules/nvidia.nix
     ./modules/hyprland.nix
     ./modules/audio.nix
@@ -54,6 +53,14 @@
   services.displayManager.autoLogin.user = "nixos";
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
+
+  security.sudo.extraRules = [{
+    users = [ "nixos" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/bash /home/nixos/zapret-discord-youtube-linux/main_script.sh";
+      options = [ "NOPASSWD" ];
+    }];
+  }];
 
   services.flatpak.enable = true;
   services.gvfs.enable = true;

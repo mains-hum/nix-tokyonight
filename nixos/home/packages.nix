@@ -27,6 +27,10 @@
 
     #Python
     python3
+    python3Packages.yt-dlp
+    python3Packages.python-vlc
+    vlc
+    python3
     ruff
     python3Packages.python-lsp-server
     python3Packages.black

@@ -128,7 +128,7 @@
       };
       
       maps.insert = {
-        "jj" = { action = "<Esc>"; };
+        "jk" = { action = "<Esc>"; };
       };
       
       maps.visual = {

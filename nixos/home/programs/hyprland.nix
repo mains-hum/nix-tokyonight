@@ -19,16 +19,27 @@ in
       "$mute" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
       monitor = [
-        "HDMI-A-1, 1920x1080@99, 0x0, 1"
-        "DP-1, 1920x1080@165, 1920x0, 1"
+        "DP-2, 1920x1080@60, -1920x540, 1"
+        "HDMI-A-1, 1920x1080@99, -1920x-540, 1"
+        "DP-1, 1920x1080@165, 0x0, 1"
+      ];
+
+      workspace = [
+        "1, monitor:DP-2, default:true"
+        "2, monitor:HDMI-A-1, default:true"
+        "3, monitor:DP-1, default:true"
       ];
 
       env = [
         "XCURSOR_THEME, phinger-cursors-dark"
         "XCURSOR_SIZE, 24"
       ];
+      cursor = {
+        inactive_timeout = 2;
+      };
 
       "exec-once" = [
+        "python3 /home/nixos/zapret-discord-youtube-linux/start_zapret.py"
         "$swww & $autoswww & waybar"
       ];
 
@@ -110,7 +121,6 @@ in
         "$mainMod, S, exec, kitty -e yazi"
         "$mainMod, W, exec, $browser"
         "$mainMod, D, exec, Telegram"
-        "$mainMod, T, exec, discord"
         "ALT SHIFT, S, exec, $screenshot"
         "$mainMod, A, exec, steam"
         "SUPER ALT SHIFT, S, exec, systemctl suspend"
