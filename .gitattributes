@@ -1,6 +1,1 @@
-*.nix linguist-detectable=true
-*.js linguist-detectable=true
-*.html linguist-detectable=true
-*.json linguist-detectable=true
-*.vim linguist-detectable=true
-*.py linguist-detectable=true
+/target
